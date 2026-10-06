@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+</head>
+
+<body>
+
+<center>
+
+    <h1 style="color: green;">📱 Simple Interest Calculator</h1>
+
+    <form method="post">
+
+        <input type="number" step="any" name="p"
+               placeholder="Principal Amount" required>
+        <br><br>
+
+        <input type="number" step="any" name="r"
+               placeholder="Rate of Interest" required>
+        <br><br>
+
+        <input type="number" step="any" name="t"
+               placeholder="Time (in years)" required>
+        <br><br>
+
+        <input type="submit" value="Calculate Simple Interest">
+
+    </form>
+
+</center>
+
+{% if result %}
+
+<hr>
+
+<center>
+
+    <h3>Result</h3>
+
+    <span>Principal: {{ p }}</span>
+    <br><br>
+
+    <span>Rate: {{ r }}</span>
+    <br><br>
+
+    <span>Time: {{ t }}</span>
+    <br><br>
+
+    <span>
+        <b>Total Amount: {{ total_amount }}</b>
+        <br>
+        <b>Simple Interest: {{ simple_interest }}</b>
+    </span>
+
+</center>
+
+{% endif %}
+
+</body>
+</html>
